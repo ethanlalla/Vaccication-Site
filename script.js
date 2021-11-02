@@ -4,8 +4,8 @@ var name= ' Chrsitne ';
 
 var message = 'Hi' + name + 'Vaccine Approved, Welcome to Massy Stores!';
 
-var element = document.getElementById('AYV');
+var elName = document.getElementById('AYV');
 
-element.textContent = message;
+elName.textContent = message;
 
 console.log(message);
