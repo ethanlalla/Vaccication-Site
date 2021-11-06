@@ -1,9 +1,4 @@
-
-
-
-
 var vaccinated = false;
-
 
 var name = 'Chris Oneal';
 
@@ -16,14 +11,13 @@ elName.textContent = message;
 console.log(message);
 
 
-
 var vaccineCard = {
   name: 'Chris Oneal',
-  vaccinationLocation: 'Napa',
+  vaccineLocation: 'Napa',
   type: 'Astra Zenica',
-  secondDose: new Date('Nov 2, 2021 01:00:00'),
+  secondDose: new Date('Nov 3, 2021 01:00:00'),
   fullyVacced: true,
-  getDifference:function(){
+  checkDifference:function(){
     var today = new Date()
     var difference = today.getTime() - vaccineCard.secondDose.getTime();
     difference = Math.floor(difference/84600000);
@@ -31,7 +25,7 @@ var vaccineCard = {
   }
 };
 
-var date = vaccineCard.getDifference();
+var date = vaccineCard.checkDifference();
 var daysUntil = 14 - date;
 
 
@@ -41,7 +35,7 @@ if (vaccineCard.fullyVacced == true) {
  message.textContent= "Your Vaccination has be verified enjoy your Movie!";
  } else {
    var message = document.getElementById("message");
-    message.textContent= "There are " + daysUntil + " until you will be fully vaccinated. Please try again then";
+    message.textContent= "There are " + daysUntil + " until you will be fully vaccinated.";
  }
  } else { var message = document.getElementById("message");
     message.textContent= "Unfortunatley you are not vaccinated and cannot be allowed entry."
